@@ -2,4 +2,8 @@ extends layout
 
 block content
   h1= title
-  p Welcome to 'Test'
+  p Welcome to #{title}
+  form(method='post', action='/quotes')
+    input(name='author',value='')
+    input(name='text',value='')
+    input(type='submit', value='save')
